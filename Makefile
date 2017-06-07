@@ -1,7 +1,7 @@
 all: build_game
 
 build_game: main.o game.o game_state_start.o game_state_editor.o texture_manager.o
-	g++ main.o game.o game_state_start.o game_state_editor.o -o texture_manager.o CityBuilder -lsfml-graphics -lsfml-window -lsfml-system
+	g++ main.o game.o game_state_start.o game_state_editor.o texture_manager.o -o CityBuilder -lsfml-graphics -lsfml-window -lsfml-system
 
 main.o: main.cpp
 	g++ -c main.cpp -std=c++14
