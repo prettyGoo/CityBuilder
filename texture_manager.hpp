@@ -1,0 +1,6 @@
+#ifndef TEXTURE_MANAGER_HPP
+#define TEXTURE_MANAGER_HPP
+
+
+
+#endif /* TEXTURE_MANAGER_HPP */

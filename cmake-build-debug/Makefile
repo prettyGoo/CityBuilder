@@ -111,17 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named CityBuilders
+# Target rules for targets named CityBuilder
 
 # Build rule for target.
-CityBuilders: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 CityBuilders
-.PHONY : CityBuilders
+CityBuilder: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CityBuilder
+.PHONY : CityBuilder
 
 # fast build rule for target.
-CityBuilders/fast:
-	$(MAKE) -f CMakeFiles/CityBuilders.dir/build.make CMakeFiles/CityBuilders.dir/build
-.PHONY : CityBuilders/fast
+CityBuilder/fast:
+	$(MAKE) -f CMakeFiles/CityBuilder.dir/build.make CMakeFiles/CityBuilder.dir/build
+.PHONY : CityBuilder/fast
+
+game.o: game.cpp.o
+
+.PHONY : game.o
+
+# target to build an object file
+game.cpp.o:
+	$(MAKE) -f CMakeFiles/CityBuilder.dir/build.make CMakeFiles/CityBuilder.dir/game.cpp.o
+.PHONY : game.cpp.o
+
+game.i: game.cpp.i
+
+.PHONY : game.i
+
+# target to preprocess a source file
+game.cpp.i:
+	$(MAKE) -f CMakeFiles/CityBuilder.dir/build.make CMakeFiles/CityBuilder.dir/game.cpp.i
+.PHONY : game.cpp.i
+
+game.s: game.cpp.s
+
+.PHONY : game.s
+
+# target to generate assembly for a file
+game.cpp.s:
+	$(MAKE) -f CMakeFiles/CityBuilder.dir/build.make CMakeFiles/CityBuilder.dir/game.cpp.s
+.PHONY : game.cpp.s
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/CityBuilder.dir/build.make CMakeFiles/CityBuilder.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/CityBuilder.dir/build.make CMakeFiles/CityBuilder.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/CityBuilder.dir/build.make CMakeFiles/CityBuilder.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -131,7 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... CityBuilders"
+	@echo "... CityBuilder"
+	@echo "... game.o"
+	@echo "... game.i"
+	@echo "... game.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
