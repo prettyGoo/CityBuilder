@@ -14,7 +14,7 @@ std::string tileTypeToStr(TileType type);
 class Tile
 {
     public:
-    Animationhandler animHandler;
+    AnimationHandler animHandler;
     TileType tileType;
     int tileVariant;
 
@@ -34,10 +34,10 @@ class Tile
     int maxLevels;
 
     Tile() { }
-    Tile(const unsigned int tileSize, const unsigned int height, sf::Texture& texture,
+    Tile(const int tileSize, const int height, sf::Texture& texture,
          const std::vector<Animation>& animations,
-         const TileType tileType, const unsigned int cost, const unsigned int maxPopPerLevel,
-         const unsigned int maxLevels)
+         const TileType tileType, const int cost, const int maxPopPerLevel,
+         const int maxLevels)
     {
         this->tileType = tileType;
         this->tileVariant = 0;
@@ -55,7 +55,7 @@ class Tile
         this->animHandler.frameSize = sf::IntRect(0, 0, tileSize*2, tileSize*height);
         for(auto animation : animations)
         {
-            this->animHandler.addAnim(animation);
+            this->animHandler.addAnimation(animation);
         }
         this->animHandler.update(0.0f);
     }
